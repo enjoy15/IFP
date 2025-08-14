@@ -1,71 +1,136 @@
-# Project XYZ
-
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+# Online Retail Transaction Analysis
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+The "Online Retail Transaction" dataset contains information on transactions made by customers through an online retail platform. The dataset includes data on the products that were purchased, the quantity of each product, the date and time of each transaction, the price of each product, the unique identifier for each customer who made a purchase, and the country where each customer is located. This dataset can be used to analyze customer behavior and preferences, identify popular products, and optimize pricing and marketing strategies. The dataset is well-suited for data analysis and machine learning applications, as it contains a large volume of transactional data that can be used to train predictive models and make data-driven decisions.
 
+### Column Descriptors
+- InvoiceNo: Unique identifier for each transaction
+- StockCode: A code used to identify the product that was purchased
+- Description: A brief description of the product that was purchased
+- Quantity: The quantity of the product that was purchased
+- InvoiceDate: The date and time that the purchase was made
+- UnitPrice: The price of one unit of the product that was purchased
+- CustomerID: The unique identifier for the customer who made the purchase
+- Country: The country where the customer who made the purchase is located
 
 ## Business Requirements
-* Describe your business requirements
 
+Analyse online retail transaction data to understand customer behaviour, identify popular products, and optimise pricing and marketing strategies. Provide insights into customer behaviour, popular products, and pricing strategies to improve sales and marketing efforts.
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+### Hypotheses:
+1. **H1**: The UK market generates the majority of revenue due to being the primary market
+   - **Validation**: Analyse revenue by country and plot top 10 countries by revenue
 
+2. **H2**: Higher-priced items have lower quantities sold (inverse relationship)
+   - **Validation**: Plot unit price vs quantity to see relationship 
+
+3. **H3**: Customer segments can be effectively identified using RFM analysis
+   - **Validation**: RFM segmentation and validation through business metrics
+  
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
+
+### High-Level Analysis Steps:
+
+1. **Data Extraction**: Load raw transaction data from CSV format
+2. **Data Cleaning**: Handle missing values, remove duplicates, filter invalid transactions
+3. **Feature Engineering**: Create derived metrics (total value, time-based features, customer metrics)
+4. **Exploratory Data Analysis**: Statistical summaries and initial insights
+5. **Customer Segmentation**: RFM analysis and customer classification
+6. **Visualization**: Create comprehensive charts
+7. **Business Intelligence**: Generate actionable insights and recommendations
+
+### Data Management Approach:
+- **Collection**: Structured CSV data with transactional records
+- **Processing**: Python-based ETL pipeline with pandas for data manipulation
+- **Analysis**: Statistical analysis using numpy, descriptive analytics, and segmentation
+- **Interpretation**: Business-focused insights with clear recommendations
+
+### Research Methodology:
+- **Descriptive Analytics**: Summarizing and describing the main features of a dataset
+- **Segmentation Analysis**: RFM methodology for customer classification
+- **Time Series Analysis**: Trend identification and seasonality detection
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+1. **Customer Behavior Analysis**: Understand purchasing patterns and frequency
+2. **Product Performance**: Identify best-selling products and revenue drivers
+3. **Market Segmentation**: Segment customers based on RFM (Recency, Frequency, Monetary) analysis
+4. **Marketing Optimization**: Determine optimal timing and targeting for marketing campaigns
+5. **Geographic Analysis**: Understand market performance across different countries
+6. **Revenue Growth**: Provide actionable insights to increase sales and customer retention
 
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+## Analysis Techniques Used
+
+### Data Analysis Methods:
+1. **Descriptive Statistics**: Mean, median, standard deviation for understanding data distribution
+2. **RFM Analysis**: Customer segmentation based on Recency, Frequency, and Monetary value
+3. **Time Series Analysis**: Trend identification and seasonal pattern detection
+4. **Correlation Analysis**: Relationship identification between variables
+5. **Distribution Analysis**: Understanding data spread and outlier identification
+
+### Data Structure Approach:
+- **Pandas DataFrame**: Primary data structure for manipulation and analysis
+- **Groupby Operations**: Aggregation for customer and product-level insights
+- **Descriptive Statistics**: Basic statistics
+
+### Limitations and Alternatives:
+- **Time Period**: Limited to available date range; longer historical data would improve trend analysis
+- **External Factors**: No external economic or seasonal factors considered; could be enhanced with external data sources
+- **Predictive Modeling**: Current analysis is descriptive; could be extended with machine learning for forecasting
+
+### Generative AI Usage:
+- **Code Optimization**: Used AI assistance for efficient pandas operations and visualization improvements
+- **Documentation**: AI-assisted documentation generation and README structuring
+- **Best Practices**: AI guidance on data analysis methodologies and statistical approaches
+- **Visualization Enhancement**: AI suggestions for effective chart types and styling
 
 ## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
 
-
+### Data Privacy:
+- **Customer Anonymization**: Customer IDs are anonymised identifiers, no personal information exposed
+- **Data Aggregation**: Analysis performed at aggregate levels to protect individual privacy
+- 
+### Bias and Fairness:
+- **Geographic Bias**: UK-heavy dataset may not represent global patterns; acknowledged in limitations
+- **Temporal Bias**: Single-year data may not capture long-term trends; noted for future improvements
+- **Selection Bias**: Online-only transactions may not represent full retail landscape
+- 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+### Knowledge Gaps
+- **Advanced Statistical Testing**: Implemented correlation analysis and distribution testing
+- **Business Intelligence**: Enhanced understanding of retail KPIs and customer metrics
+- **Data Visualization Best Practices**: Improved chart selection and styling for business audiences
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
 
+### Challenges Overcome:
+* Handling large dataset using ETL pipeline and pandas operations
+* Create complex visualizations using Matplotlib / Seaborn / Plotly
+
+### Future Learning Goals:
+* Learn interactive dashboard creation
+* Develop statistical testing for marketing campaign effectiveness
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
-
+* Pandas: For data cleaning and manipulation. 
+* NumPy: For numerical computations. 
+* Matplotlib / Seaborn / Plotly: For visualizations.
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
-
 ### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
 
+## Kanban
+[Project Planning] (https://github.com/users/enjoy15/projects/1)
 
+## Data source 
+[Kaggle] (https://www.kaggle.com/datasets/abhishekrp1517/online-retail-transactions-dataset )
 
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+Thanks Vasi for the support
+
