@@ -91,12 +91,12 @@ Analyse online retail transaction data to understand customer behaviour, identif
 ### Data Privacy:
 - **Customer Anonymization**: Customer IDs are anonymised identifiers, no personal information exposed
 - **Data Aggregation**: Analysis performed at aggregate levels to protect individual privacy
-- 
+  
 ### Bias and Fairness:
 - **Geographic Bias**: UK-heavy dataset may not represent global patterns; acknowledged in limitations
 - **Temporal Bias**: Single-year data may not capture long-term trends; noted for future improvements
 - **Selection Bias**: Online-only transactions may not represent full retail landscape
-- 
+  
 ## Unfixed Bugs
 ### Knowledge Gaps
 - **Advanced Statistical Testing**: Implemented correlation analysis and distribution testing
