@@ -118,19 +118,12 @@ Analyse online retail transaction data to understand customer behaviour, identif
 * NumPy: For numerical computations. 
 * Matplotlib / Seaborn / Plotly: For visualizations.
 
-## Credits 
-
-### Content 
-
-### Media
-
-
 ## Kanban
 [Project Planning] (https://github.com/users/enjoy15/projects/1)
 
 ## Data source 
 [Kaggle] (https://www.kaggle.com/datasets/abhishekrp1517/online-retail-transactions-dataset )
 
-## Acknowledgements (optional)
+## Acknowledgements
 Thanks Vasi for the support
 
